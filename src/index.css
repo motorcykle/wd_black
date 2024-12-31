@@ -41,7 +41,7 @@ body {
 }
 
 .floating-nav {
-  @apply bg-[#F2F2F2] rounded-lg border shadow-2xl;
+  @apply bg-[#F2F2F2] rounded-lg border shadow-xl;
 }
 
 @layer base {

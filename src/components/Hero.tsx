@@ -77,8 +77,8 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-[#444444] min-h-dvh h-dvh w-screen relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+    <section className=" min-h-dvh h-dvh w-screen relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 ">
         <video
           loop
           muted
@@ -87,6 +87,7 @@ export default function Hero() {
           className="w-full h-full object-cover"
           style={{ pointerEvents: "none" }}
         ></video>
+        <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#F2F2F2] to-transparent pointer-events-none"></div>
       </div>
       <div id="container_frame" className="size-full z-20 flex flex-col md:flex-row items-center justify-center relative bg-[#F2F2F2] shadow-2xl py-28 max-xl:px-5">
         <div id="l_side" className="flex flex-col gap-6 items-start relative">
