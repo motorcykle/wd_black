@@ -1,5 +1,3 @@
-import { BsPlaystation } from "react-icons/bs";
-import { FaPlaystation } from "react-icons/fa";
 
 export default function Product () {
   return <section className="min-h-dvh w-screen">
@@ -30,6 +28,5 @@ export default function Product () {
     <div className="">
 
     </div>
-
   </section>
 }
