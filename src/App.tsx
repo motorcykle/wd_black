@@ -4,7 +4,7 @@ import Split from "./components/Split"
 
 function App() {
   return (
-    <main>
+    <main className="w-screen overflow-hidden">
       <Hero />
       <Split />
       <Product />
