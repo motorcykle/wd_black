@@ -146,7 +146,7 @@ export default function Product() {
             ${products[Number(value)].price}.99
           </p>
           <Button size={"sm"} onClick={() => setIsExploding(true)} className="uppercase xs font-general">
-            add in cart <BsLightning />
+            add to cart <BsLightning />
             {isExploding && <ConfettiExplosion onAnimationEnd={() => setIsExploding(false)} />}
           </Button>
         </div>
