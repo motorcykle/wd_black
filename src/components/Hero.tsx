@@ -84,7 +84,7 @@ export default function Hero() {
           muted
           autoPlay
           src="/4k.mp4"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover pointer-events-none"
           style={{ pointerEvents: "none" }}
         ></video>
       </div>
