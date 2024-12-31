@@ -77,8 +77,32 @@ export default function Hero() {
   };
 
   return (
-    <section className=" min-h-dvh h-dvh w-screen relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 ">
+    <section className=" min-h-dvh h-dvh w-screen relative n">
+          <section className="bg-black py-3 overflow-hidden -rotate-[.75deg] bottom-0 left-0 min-w-[100dvw] absolute z-19">
+      <div className="text-xs font-general tracking-widest flex items-center  gap-6 text-[#F2F2F2] uppercase">
+        <p>wd_black</p>
+        <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+        <p>wd_black</p>
+        <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+        <p>wd_black</p>
+        <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+        <p>wd_black</p>
+        <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+        <p>wd_black</p>
+        <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+        <p>wd_black</p>
+        <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+        <p>wd_black</p>
+        <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+        <p>wd_black</p>
+        <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+        <p>wd_black</p>
+        <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+        <p>wd_black</p>
+        <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+      </div>
+    </section>
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 ">
         <video
           loop
           muted
@@ -88,7 +112,7 @@ export default function Hero() {
           style={{ pointerEvents: "none" }}
         ></video>
       </div>
-      <div id="container_frame" className="size-full z-20 flex flex-col md:flex-row items-center justify-center relative bg-[#F2F2F2] shadow-2xl py-28 max-xl:px-5">
+      <div id="container_frame" className="size-full z-18 flex flex-col md:flex-row items-center justify-center relative bg-[#F2F2F2] shadow-2xl py-28 max-xl:px-5">
         <div id="l_side" className="flex flex-col gap-6 items-start relative">
           <h1 className="text-5xl md:text-8xl uppercase font-mono">
             wd_<b className="font-black">black</b>
