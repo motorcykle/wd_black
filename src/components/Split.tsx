@@ -1,0 +1,26 @@
+export default function Split () {
+  return <section className="bg-black py-3 overflow-hidden -rotate-[.75deg] bottom-0 left-0 min-w-[100dvw] absolute z-19">
+    <div className="text-xs font-general tracking-widest flex items-center  gap-6 text-[#F2F2F2] uppercase">
+      <p>wd_black</p>
+      <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+      <p>wd_black</p>
+      <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+      <p>wd_black</p>
+      <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+      <p>wd_black</p>
+      <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+      <p>wd_black</p>
+      <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+      <p>wd_black</p>
+      <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+      <p>wd_black</p>
+      <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+      <p>wd_black</p>
+      <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+      <p>wd_black</p>
+      <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+      <p>wd_black</p>
+      <p className="whitespace-nowrap">SN850P NVMe™ SSD</p>
+    </div>
+  </section>
+}
