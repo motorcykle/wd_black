@@ -3,6 +3,9 @@ import { Button } from "./ui/button";
 import { MouseEvent, useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
   const [transformStyle, setTransformStyle] = useState<string>("");
@@ -35,6 +38,25 @@ export default function Hero() {
       ); // Overlap the animations slightly
   });
 
+  useGSAP(() => {
+    gsap.set("#container_frame", {
+      clipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
+      borderRadius: "0% 0% 40% 10%",
+    });
+    gsap.from("#container_frame", {
+      clipPath: "polygon(0% 0, 100% 0, 100% 100%, 0% 100%)",
+      borderRadius: "0% 0% 0% 0%",
+      ease: "power1.inOut",
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: "#container_frame",
+        start: "center center",
+        end: "bottom center",
+        scrub: true,
+      },
+    });
+  });
+
   const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
     if (!itemRef.current || window.innerWidth < 768) return; // Disable tilt for touch devices
 
@@ -55,10 +77,20 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-[#444444] min-h-dvh h-dvh w-screen">
-      <div className="size-full flex flex-col md:flex-row items-center justify-center relative bg-[#F2F2F2]">
+    <section className="bg-[#444444] min-h-dvh h-dvh w-screen relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+        <video
+          loop
+          muted
+          autoPlay
+          src="/4k.mp4"
+          className="w-full h-full object-cover"
+          style={{ pointerEvents: "none" }}
+        ></video>
+      </div>
+      <div id="container_frame" className="size-full z-20 flex flex-col md:flex-row items-center justify-center relative bg-[#F2F2F2] shadow-2xl py-28 max-xl:px-5">
         <div id="l_side" className="flex flex-col gap-6 items-start relative">
-          <h1 className="text-8xl uppercase font-mono">
+          <h1 className="text-5xl md:text-8xl uppercase font-mono">
             wd_<b className="font-black">black</b>
           </h1>
 
@@ -87,16 +119,16 @@ export default function Hero() {
             <img
               src="/img/WD-2TB-Storage-Hero1.webp"
               alt=""
-              className="-rotate-45"
+              className="-rotate-45 hidden md:inline-block"
             />
           </div>
         </div>
 
         <div
           id="r_side"
-          className="absolute bottom-10 right-10 p-10 rounded-2xl tracking-widest"
+          className="absolute bottom-10 right-0 md:right-10 p-0 md:p-10 tracking-widest"
         >
-          <p className="text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-500 to-white font-general uppercase text-xl leading-loose">
+          <p className="text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-500 to-white font-general uppercase text-xs md:text-xl  leading-loose">
             <span className="ml-14"></span>store more, play more, <br /> fast
             stocker plus, <br />
             <span className="ml-12"></span> jouer plus, vite
