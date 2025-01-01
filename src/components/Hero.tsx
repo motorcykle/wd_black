@@ -84,9 +84,11 @@ export default function Hero() {
           muted
           autoPlay
           src="/4k.mp4"
-          className="w-full h-full object-cover pointer-events-none"
+          className="w-full h-full object-cover pointer-events-none hidden md:inline-block"
           style={{ pointerEvents: "none" }}
         ></video>
+
+        <img src="/pexels-shvets-production-7562108.jpg" alt="" className="md:hidden w-full h-full object-cover pointer-events-none" />
       </div>
 
       <div className="absolute inset-0 -z-5 pointer-events-auto"></div>
